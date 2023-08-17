@@ -38,12 +38,30 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">Comet</span></span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Comet" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>cUSDCv3</strong>: 0xc3d688B66703497DAA19211EEdff47f25384cdc3</p>
 <p><strong>cWETHv3</strong>: 0xA17581A9E3356d9A858b789D68B4d866e593aE94</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.Comet.cUSDCv3">
+<span class="sig-name descname"><span class="pre">cUSDCv3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'0xc3d688B66703497DAA19211EEdff47f25384cdc3'</span></em><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Comet.cUSDCv3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.Comet.cWETHv3">
+<span class="sig-name descname"><span class="pre">cWETHv3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'0xA17581A9E3356d9A858b789D68B4d866e593aE94'</span></em><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Comet.cWETHv3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.Approve">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">Approve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Approve" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>target_address</strong>: The token address.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -51,7 +69,15 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.Allow">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">Allow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Allow" title="Permalink to this definition">¶</a></dt>
 <dd><p>The approval for the MainnetBulker is done once per wallet.</p>
-<p><strong>target_address</strong>: None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>target_address</strong>: ‘’</p>
 <p><strong>fixed_arguments</strong>: {‘manager’: &lt;ETHAddr.COMPOUND_Bulker: ‘0xa397a8C2086C554B531c02E29f3291c9704B00c7’&gt;, ‘is_allowed’: True}</p>
 </dd></dl>
 
@@ -61,7 +87,15 @@
 <dd><p>Supply token.</p>
 <p>If the supplied asset is the underlying token of the Comet then you get in exchange approximately
 the same amount of Comet token. Otherwise, the supplied amount of asset is transfered to the Comet as collateral.</p>
-<p><strong>target_address</strong>: None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>target_address</strong>: ‘’</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -69,6 +103,14 @@ the same amount of Comet token. Otherwise, the supplied amount of asset is trans
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.SupplyETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">SupplyETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.SupplyETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Supply ETH</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.COMPOUND_Bulker: ‘0xa397a8C2086C554B531c02E29f3291c9704B00c7’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘actions’: [‘0x414354494f4e5f535550504c595f4e41544956455f544f4b454e000000000000’]}</p>
 </dd></dl>
@@ -80,7 +122,15 @@ the same amount of Comet token. Otherwise, the supplied amount of asset is trans
 <p>If the withdrawn asset is the underlying token of the Comet then you burn the amount of
 Comet token for the same amount of underlying token.  Otherwise, the withdrawn amount
 of asset is removed from the Comet as collateral</p>
-<p><strong>target_address</strong>: None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>target_address</strong>: ‘’</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -88,6 +138,14 @@ of asset is removed from the Comet as collateral</p>
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.WithdrawETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">WithdrawETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.WithdrawETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Withdraw ETH</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.COMPOUND_Bulker: ‘0xa397a8C2086C554B531c02E29f3291c9704B00c7’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘actions’: [‘0x414354494f4e5f57495448445241575f4e41544956455f544f4b454e00000000’]}</p>
 </dd></dl>
@@ -96,7 +154,15 @@ of asset is removed from the Comet as collateral</p>
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.Borrow">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">Borrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Borrow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Borrow. Same as Withdraw, but you can ONLY borrow the Comets’ underlying token</p>
-<p><strong>target_address</strong>: None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>target_address</strong>: ‘’</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -104,7 +170,15 @@ of asset is removed from the Comet as collateral</p>
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.Repay">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">Repay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Repay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repay. Same as Deposit, but you can ONLY repay the Comets’ underlying token</p>
-<p><strong>target_address</strong>: None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>target_address</strong>: ‘’</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -112,6 +186,14 @@ of asset is removed from the Comet as collateral</p>
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v3.Claim">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v3.</span></span><span class="sig-name descname"><span class="pre">Claim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">should_accrue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v3.Claim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Claim COMP rewards</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.COMPOUND_CometRewards: ‘0x1B0e765F6224C21223AeA2af16c1C46E38885a40’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘src’: AvatarAddress}</p>
 </dd></dl>
@@ -137,9 +219,6 @@ of asset is removed from the Comet as collateral</p>
 
 
 <h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../generic_calls.html">Generic calls</a></li>
-</ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Protocols</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="aave_v2.html">AAVEv2</a></li>
@@ -152,6 +231,9 @@ of asset is removed from the Comet as collateral</p>
 <li class="toctree-l2"><a class="reference internal" href="spark.html">Spark</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generic_calls.html">Generic calls</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>

@@ -1,8 +1,8 @@
 API
 ===
 
-Roles
------
+Roles functions
+---------------
 
 .. module:: roles_royce.roles
 
@@ -24,3 +24,15 @@ Transactable elements
 .. autoclass:: roles_royce.protocols.base.ContractMethod
    :members:
    :inherited-members:
+
+Roles Modifier
+--------------
+
+.. autointenum:: roles_royce.roles_modifier.Operation
+    :members:
+
+.. autoexception:: roles_royce.roles_modifier.TransactionWouldBeReverted
+    :members:
+
+.. autoclass:: roles_royce.roles_modifier.RolesMod
+    :members:

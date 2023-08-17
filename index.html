@@ -13,7 +13,7 @@
     <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Generic calls" href="generic_calls.html" />
+    <link rel="next" title="Protocols" href="protocols/index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -46,57 +46,59 @@ backward incompatibility changes until we stabilize the API.
 We encourage you to stay engaged with the project’s updates and contribute
 to its evolution.</p>
 </div>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
-<p>The main functions that are provided are:</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
+<p>Roles Royce provides a way to declare protocol functions, called <a class="reference internal" href="api.html#roles_royce.protocols.base.ContractMethod" title="roles_royce.protocols.base.ContractMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContractMethod</span></code></a>,
+and some functions to interact with the Roles Modifier contract:</p>
 <ul class="simple">
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">roles.check()</span></code> to statically check if a transaction will go through or will fail.</p></li>
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">roles.send()</span></code> to actually send the transaction to the blockchain.</p></li>
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">roles.build()</span></code> to create a transaction to later be sent to the blockchain or other uses such as studying it or composing it with other contracts.</p></li>
+<li><p><a class="reference internal" href="api.html#roles_royce.roles.check" title="roles_royce.roles.check"><code class="xref py py-meth docutils literal notranslate"><span class="pre">roles_royce.roles.check()</span></code></a> to statically check if a transaction will go through or will fail.</p></li>
+<li><p><a class="reference internal" href="api.html#roles_royce.roles.send" title="roles_royce.roles.send"><code class="xref py py-meth docutils literal notranslate"><span class="pre">roles_royce.roles.send()</span></code></a> to actually send the transaction to the blockchain.</p></li>
+<li><p><a class="reference internal" href="api.html#roles_royce.roles.build" title="roles_royce.roles.build"><code class="xref py py-meth docutils literal notranslate"><span class="pre">roles_royce.roles.build()</span></code></a> to create a transaction to later be sent to the blockchain
+or other uses such as studying it or composing it with other contracts.</p></li>
 </ul>
+<p>Many DeFi protocols are already implemented, ready to be used. See <a class="reference internal" href="#supported-protocols">Supported protocols</a>.</p>
 </section>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
-<p>Deposit GNO into the Spark protocol:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">roles_royce.protocols.eth</span> <span class="kn">import</span> <span class="n">spark</span>
-<span class="kn">from</span> <span class="nn">roles_royce</span> <span class="kn">import</span> <span class="n">roles</span>
+<p>The following example shows how to deposit GNO from a <a class="reference external" href="https://app.safe.global/">Safe</a>
+using an EOA, that has roles modifier preset with permissions, into the Spark protocol:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">roles_royce</span> <span class="kn">import</span> <span class="n">roles</span>
+<span class="kn">from</span> <span class="nn">roles_royce.protocols.eth</span> <span class="kn">import</span> <span class="n">spark</span>
 <span class="kn">from</span> <span class="nn">web3</span> <span class="kn">import</span> <span class="n">Web3</span><span class="p">,</span> <span class="n">HTTPProvider</span>
 
+<span class="n">safe_address</span> <span class="o">=</span> <span class="s2">&quot;0x...&quot;</span>
+<span class="n">eoa_private_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;EOA_PRIVATE_KEY&quot;</span><span class="p">)</span>
+<span class="n">roles_mod_address</span> <span class="o">=</span> <span class="s2">&quot;0x...&quot;</span> <span class="c1"># Role contract with a preset that allows the EOA to approve and deposit</span>
+
 <span class="n">w3</span> <span class="o">=</span> <span class="n">Web3</span><span class="p">(</span><span class="n">HTTPProvider</span><span class="p">(</span><span class="s2">&quot;https://...&quot;</span><span class="p">))</span>
-<span class="n">safe_address</span> <span class="o">=</span> <span class="s2">&quot;0xabc..&quot;</span>
+
+<span class="c1"># Start with some GNO balance in the Safe</span>
 <span class="k">assert</span> <span class="n">get_balance</span><span class="p">(</span><span class="n">w3</span><span class="p">,</span> <span class="n">ETHAddr</span><span class="o">.</span><span class="n">GNO</span><span class="p">,</span> <span class="n">safe_address</span><span class="p">)</span> <span class="o">==</span> <span class="mi">123_000_000</span>
 
 <span class="c1"># Create the transaction data for the aproval and deposit of GNO</span>
 <span class="n">txs</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">spark</span><span class="o">.</span><span class="n">ApproveToken</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">ETHAddr</span><span class="o">.</span><span class="n">GNO</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mi">123_000_000</span><span class="p">),</span>
-    <span class="n">spark</span><span class="o">.</span><span class="n">DepositToken</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">ETHAddr</span><span class="o">.</span><span class="n">GNO</span><span class="p">,</span> <span class="n">avatar</span><span class="o">=</span><span class="n">safe</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+    <span class="n">spark</span><span class="o">.</span><span class="n">DepositToken</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">ETHAddr</span><span class="o">.</span><span class="n">GNO</span><span class="p">,</span> <span class="n">avatar</span><span class="o">=</span><span class="n">safe_address</span><span class="p">,</span>
                        <span class="n">amount</span><span class="o">=</span><span class="mi">123_000_000</span><span class="p">),</span>
     <span class="n">spark</span><span class="o">.</span><span class="n">ApproveToken</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">ETHAddr</span><span class="o">.</span><span class="n">GNO</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
 <span class="p">]</span>
 
 <span class="c1"># Through the Roles modifier contract deposit GNO to receive spGNO</span>
-<span class="c1"># It will be executed as only one transaction using a Multisend contract</span>
+<span class="c1"># It will be executed as a single transaction using a Multisend contract</span>
 <span class="n">roles</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">txs</span><span class="p">,</span>
-           <span class="n">account</span><span class="o">=</span><span class="s2">&quot;0x...&quot;</span><span class="p">,</span>
-           <span class="n">roles_mod_address</span><span class="o">=</span><span class="s2">&quot;0x...&quot;</span><span class="p">,</span>
+           <span class="n">private_key</span><span class="o">=</span><span class="n">eoa_private_key</span><span class="p">,</span>
+           <span class="n">roles_mod_address</span><span class="o">=</span><span class="p">,</span>
+           <span class="n">role</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
            <span class="n">web3</span><span class="o">=</span><span class="n">w3</span><span class="p">)</span>
 
+<span class="c1"># All the Safe&#39;s GNO tokens were converted into spGNO</span>
 <span class="k">assert</span> <span class="n">get_balance</span><span class="p">(</span><span class="n">w3</span><span class="p">,</span> <span class="n">ETHAddr</span><span class="o">.</span><span class="n">GNO</span><span class="p">,</span> <span class="n">safe_address</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="k">assert</span> <span class="n">get_balance</span><span class="p">(</span><span class="n">w3</span><span class="p">,</span> <span class="n">ETHAddr</span><span class="o">.</span><span class="n">spGNO</span><span class="p">,</span> <span class="n">safe_address</span><span class="p">)</span> <span class="o">==</span> <span class="mi">123_000_000</span>
 </pre></div>
 </div>
 </section>
-<section id="generic-calls">
-<h2>Generic calls<a class="headerlink" href="#generic-calls" title="Permalink to this heading">¶</a></h2>
-<p>Beside the provided protocol methods, generic calls can be performed.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="generic_calls.html">Generic calls</a></li>
-</ul>
-</div>
-</section>
-<section id="protocols-supported">
-<h2>Protocols supported<a class="headerlink" href="#protocols-supported" title="Permalink to this heading">¶</a></h2>
+<section id="supported-protocols">
+<h2>Supported protocols<a class="headerlink" href="#supported-protocols" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="protocols/index.html">Protocols</a><ul>
@@ -113,10 +115,74 @@ to its evolution.</p>
 </ul>
 </div>
 </section>
+<section id="how-to-add-support-for-a-new-protocol">
+<h2>How to add support for a new protocol<a class="headerlink" href="#how-to-add-support-for-a-new-protocol" title="Permalink to this heading">¶</a></h2>
+<p>To add support for <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Porotocol</span></code> in Mainnet create a python module in
+<code class="docutils literal notranslate"><span class="pre">roles_royce/protocols/eth/myproto.py</span></code>.
+In that file create a subclass of <a class="reference internal" href="api.html#roles_royce.protocols.base.ContractMethod" title="roles_royce.protocols.base.ContractMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContractMethod</span></code></a> per function
+of the contract (or contracts of the protocols) that you want to support.</p>
+<p>Example of a simple function from the Lido protocol:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">roles_royce.constants</span> <span class="kn">import</span> <span class="n">ETHAddr</span>
+<span class="kn">from</span> <span class="nn">roles_royce.protocols.base</span> <span class="kn">import</span> <span class="n">ContractMethod</span><span class="p">,</span> <span class="n">Address</span>
+
+<span class="k">class</span> <span class="nc">Wrap</span><span class="p">(</span><span class="n">ContractMethod</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;wrap&quot;</span> <span class="c1"># name of the function in the contract</span>
+    <span class="n">in_signature</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;uint256&quot;</span><span class="p">)]</span> <span class="c1">#</span>
+    <span class="n">target_address</span> <span class="o">=</span> <span class="n">ETHAddr</span><span class="o">.</span><span class="n">wstETH</span> <span class="c1"># address of the contract</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sender deposits stETH and receives wstETH.</span>
+
+<span class="sd">        :param amount: amount of wstETH user receives after wrap.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span> <span class="c1"># always call the init of the inherited class</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">amount</span> <span class="o">=</span> <span class="n">amount</span> <span class="c1"># the value of the arguments for the method</span>
+</pre></div>
+</div>
+<p>A more involved example from Compound v3, using <code class="docutils literal notranslate"><span class="pre">fixed_arguments</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BorrowETH</span><span class="p">(</span><span class="n">ContractMethod</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;borrowETH&quot;</span>
+    <span class="c1"># the name of each element of the in_signature has to match the name used in ``self.args``</span>
+    <span class="n">in_signature</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;address&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;uint256&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;interest_rate_model&quot;</span><span class="p">,</span> <span class="s2">&quot;uint256&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;referral_code&quot;</span><span class="p">,</span> <span class="s2">&quot;uint16&quot;</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="c1"># when some arguments should be fixed (not just with a default value) they go in</span>
+    <span class="c1"># the fixed_arguments dict.</span>
+    <span class="n">fixed_arguments</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="n">ETHAddr</span><span class="o">.</span><span class="n">AAVE_V2_LendingPool</span><span class="p">,</span>
+        <span class="s2">&quot;referral_code&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+    <span class="n">target_address</span>  <span class="o">=</span> <span class="n">ETHAddr</span><span class="o">.</span><span class="n">AAVE_V2_WrappedTokenGateway</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">interest_rate_model</span><span class="p">:</span> <span class="n">InterestRateModel</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;&quot;Sender receives ETH and debtETH (stable or variable debt) tokens.</span>
+
+<span class="sd">        :param amount: amount the amount of ETH to borrow.</span>
+<span class="sd">        :param interest_rate_model: the interest rate model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">amount</span> <span class="o">=</span> <span class="n">amount</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">interest_rate_model</span> <span class="o">=</span> <span class="n">interest_rate_model</span>
+</pre></div>
+</div>
+<p>For more examples check out the code of the supported protocols.</p>
+</section>
+<section id="generic-calls">
+<h2>Generic calls<a class="headerlink" href="#generic-calls" title="Permalink to this heading">¶</a></h2>
+<p>Beside the provided protocol methods, generic calls can be performed.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="generic_calls.html">Generic calls</a></li>
+</ul>
+</div>
+</section>
 <section id="api">
 <h2>Api<a class="headerlink" href="#api" title="Permalink to this heading">¶</a></h2>
-<section id="main-methods">
-<h3>Main methods<a class="headerlink" href="#main-methods" title="Permalink to this heading">¶</a></h3>
+<section id="roles-methods">
+<h3>Roles methods<a class="headerlink" href="#roles-methods" title="Permalink to this heading">¶</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">roles_royce.roles.</span></span><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">txs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roles_mod_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">web3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tx_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
@@ -125,12 +191,12 @@ such as studying it or composing it with other contracts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="api.html#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – list of transactable items, usually <a class="reference internal" href="api.html#roles_royce.protocols.base.ContractMethod" title="roles_royce.protocols.base.ContractMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContractMethod</span></code></a> instances.</p></li>
-<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – role number of the execution.</p></li>
-<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – account that wants to execute.</p></li>
-<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – address to call execTransactionWithRole.</p></li>
+<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="api.html#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – List of transactable items, usually <a class="reference internal" href="api.html#roles_royce.protocols.base.ContractMethod" title="roles_royce.protocols.base.ContractMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContractMethod</span></code></a> instances.</p></li>
+<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Role number of the execution.</p></li>
+<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Account that wants to execute.</p></li>
+<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Address to call execTransactionWithRole.</p></li>
 <li><p><strong>web3</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Web3</span></code>) – Web3 object.</p></li>
-<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
+<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -146,19 +212,19 @@ such as studying it or composing it with other contracts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="api.html#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – list of transactions.</p></li>
-<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – role that wants to execute.</p></li>
-<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – account that wants to execute.</p></li>
-<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – address to call execTransactionWithRole.</p></li>
+<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="api.html#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – List of transactions.</p></li>
+<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Role that wants to execute.</p></li>
+<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Account that wants to execute.</p></li>
+<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Address to call execTransactionWithRole.</p></li>
 <li><p><strong>web3</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Web3</span></code>) – Web3 object.</p></li>
-<li><p><strong>block</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – block number or ‘latest’.</p></li>
+<li><p><strong>block</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Block number or ‘latest’.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>status</p>
+<dd class="field-odd"><p>Status.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -170,19 +236,19 @@ such as studying it or composing it with other contracts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="api.html#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – list of transactables.</p></li>
-<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – role that wants to execute.</p></li>
-<li><p><strong>private_key</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the private key.</p></li>
-<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – address to call execTransactionWithRole.</p></li>
+<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="api.html#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – List of transactables.</p></li>
+<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Role that wants to execute.</p></li>
+<li><p><strong>private_key</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The private key.</p></li>
+<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Address to call execTransactionWithRole.</p></li>
 <li><p><strong>web3</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Web3</span></code>) – Web3 object.</p></li>
-<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
+<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TxReceipt</span></code></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>tx receipt</p>
+<dd class="field-odd"><p>Tx receipt.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -195,8 +261,9 @@ method, this part of the documentation is for you.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#module-roles_royce.roles">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-roles_royce.roles">Roles functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#transactable-elements">Transactable elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#roles-modifier">Roles Modifier</a></li>
 </ul>
 </li>
 </ul>
@@ -233,10 +300,10 @@ method, this part of the documentation is for you.</p>
 
 <h3>Navigation</h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="generic_calls.html">Generic calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocols/index.html">Protocols</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="protocols/index.html">Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generic_calls.html">Generic calls</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
@@ -257,7 +324,7 @@ method, this part of the documentation is for you.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="generic_calls.html" title="next chapter">Generic calls</a></li>
+      <li>Next: <a href="protocols/index.html" title="next chapter">Protocols</a></li>
   </ul></li>
 </ul>
 </div>

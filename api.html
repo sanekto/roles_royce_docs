@@ -13,7 +13,7 @@
     <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Spark" href="protocols/spark.html" />
+    <link rel="prev" title="Generic calls" href="generic_calls.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,7 +33,7 @@
   <section id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this heading">¶</a></h1>
 <section id="module-roles_royce.roles">
-<span id="roles"></span><h2>Roles<a class="headerlink" href="#module-roles_royce.roles" title="Permalink to this heading">¶</a></h2>
+<span id="roles-functions"></span><h2>Roles functions<a class="headerlink" href="#module-roles_royce.roles" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="roles_royce.roles.build">
 <span class="sig-prename descclassname"><span class="pre">roles_royce.roles.</span></span><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">txs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roles_mod_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">web3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tx_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.roles.build" title="Permalink to this definition">¶</a></dt>
@@ -42,12 +42,12 @@ such as studying it or composing it with other contracts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – list of transactable items, usually <a class="reference internal" href="#roles_royce.protocols.base.ContractMethod" title="roles_royce.protocols.base.ContractMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContractMethod</span></code></a> instances.</p></li>
-<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – role number of the execution.</p></li>
-<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – account that wants to execute.</p></li>
-<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – address to call execTransactionWithRole.</p></li>
+<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – List of transactable items, usually <a class="reference internal" href="#roles_royce.protocols.base.ContractMethod" title="roles_royce.protocols.base.ContractMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContractMethod</span></code></a> instances.</p></li>
+<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Role number of the execution.</p></li>
+<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Account that wants to execute.</p></li>
+<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Address to call execTransactionWithRole.</p></li>
 <li><p><strong>web3</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Web3</span></code>) – Web3 object.</p></li>
-<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
+<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -63,19 +63,19 @@ such as studying it or composing it with other contracts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – list of transactions.</p></li>
-<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – role that wants to execute.</p></li>
-<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – account that wants to execute.</p></li>
-<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – address to call execTransactionWithRole.</p></li>
+<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – List of transactions.</p></li>
+<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Role that wants to execute.</p></li>
+<li><p><strong>account</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Account that wants to execute.</p></li>
+<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Address to call execTransactionWithRole.</p></li>
 <li><p><strong>web3</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Web3</span></code>) – Web3 object.</p></li>
-<li><p><strong>block</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – block number or ‘latest’.</p></li>
+<li><p><strong>block</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Block number or ‘latest’.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>status</p>
+<dd class="field-odd"><p>Status.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -87,19 +87,19 @@ such as studying it or composing it with other contracts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – list of transactables.</p></li>
-<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – role that wants to execute.</p></li>
-<li><p><strong>private_key</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the private key.</p></li>
-<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – address to call execTransactionWithRole.</p></li>
+<li><p><strong>txs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#roles_royce.roles.Transactable" title="roles_royce.generic_method.Transactable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transactable</span></code></a>]) – List of transactables.</p></li>
+<li><p><strong>role</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Role that wants to execute.</p></li>
+<li><p><strong>private_key</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The private key.</p></li>
+<li><p><strong>roles_mod_address</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Address to call execTransactionWithRole.</p></li>
 <li><p><strong>web3</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Web3</span></code>) – Web3 object.</p></li>
-<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
+<li><p><strong>tx_kwargs</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Kwargs for the transaction, for example <code class="docutils literal notranslate"><span class="pre">max_priority_fee</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TxReceipt</span></code></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>tx receipt</p>
+<dd class="field-odd"><p>Tx receipt.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -113,7 +113,7 @@ such as studying it or composing it with other contracts.</p>
 <dd><p>Base interface for operations that can be sent to the blockchain.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="roles_royce.roles.Transactable.operation">
-<span class="sig-name descname"><span class="pre">operation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></em><a class="headerlink" href="#roles_royce.roles.Transactable.operation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">operation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#roles_royce.roles_modifier.Operation" title="roles_royce.roles_modifier.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a></em><a class="headerlink" href="#roles_royce.roles.Transactable.operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>the operation type</p>
 </dd></dl>
 
@@ -140,7 +140,135 @@ such as studying it or composing it with other contracts.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.base.</span></span><span class="sig-name descname"><span class="pre">ContractMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Inherit this class to declare a contract function.</p>
+<p>At least <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">target_address</span></code> must be defined in the
+inherited class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
+<li><p><strong>avatar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Avatar address, usually a Safe address.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the contract function</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.target_address">
+<span class="sig-name descname"><span class="pre">target_address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.target_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The address of the contract</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.in_signature">
+<span class="sig-name descname"><span class="pre">in_signature</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.in_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The input signature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.out_signature">
+<span class="sig-name descname"><span class="pre">out_signature</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.out_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output signature. Only used to do a read call.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.fixed_arguments">
+<span class="sig-name descname"><span class="pre">fixed_arguments</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.fixed_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide fixed defaults to some function attributes.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calldata of the method.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.short_signature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">short_signature</span></span><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.short_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Something like ‘deposit(address,uint256,address,uint16)’</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.abi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">abi</span></span><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.abi" title="Permalink to this definition">¶</a></dt>
+<dd><p>The abi of the method, for example to be used with Web3.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.call">
+<span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">web3</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does a read call on the method.</p>
+<p>To use it the <code class="docutils literal notranslate"><span class="pre">out_signature</span></code> must be defined.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="roles-modifier">
+<h2>Roles Modifier<a class="headerlink" href="#roles-modifier" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.roles_modifier.Operation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.roles_modifier.</span></span><span class="sig-name descname"><span class="pre">Operation</span></span><a class="headerlink" href="#roles_royce.roles_modifier.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Types of operations.</p>
+<p><strong>CALL</strong>: 0</p>
+<p><strong>DELEGATE_CALL</strong>: 1</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="roles_royce.roles_modifier.TransactionWouldBeReverted">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.roles_modifier.</span></span><span class="sig-name descname"><span class="pre">TransactionWouldBeReverted</span></span><a class="headerlink" href="#roles_royce.roles_modifier.TransactionWouldBeReverted" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is used to indicate that if a transaction is executed, it will be reverted.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.roles_modifier.RolesMod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.roles_modifier.</span></span><span class="sig-name descname"><span class="pre">RolesMod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">role</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">web3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">private_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contract_abi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'[{&quot;inputs&quot;:[{&quot;internalType&quot;:&quot;address&quot;,&quot;name&quot;:&quot;to&quot;,&quot;type&quot;:&quot;address&quot;},{&quot;internalType&quot;:&quot;uint256&quot;,&quot;name&quot;:&quot;value&quot;,&quot;type&quot;:&quot;uint256&quot;},{&quot;internalType&quot;:&quot;bytes&quot;,&quot;name&quot;:&quot;data&quot;,&quot;type&quot;:&quot;bytes&quot;},{&quot;internalType&quot;:&quot;enum</span> <span class="pre">Enum.Operation&quot;,&quot;name&quot;:&quot;operation&quot;,&quot;type&quot;:&quot;uint8&quot;},{&quot;internalType&quot;:&quot;uint16&quot;,&quot;name&quot;:&quot;role&quot;,&quot;type&quot;:&quot;uint16&quot;},{&quot;internalType&quot;:&quot;bool&quot;,&quot;name&quot;:&quot;shouldRevert&quot;,&quot;type&quot;:&quot;bool&quot;}],&quot;name&quot;:&quot;execTransactionWithRole&quot;,&quot;outputs&quot;:[{&quot;internalType&quot;:&quot;bool&quot;,&quot;name&quot;:&quot;success&quot;,&quot;type&quot;:&quot;bool&quot;}],&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;}]'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Operation.CALL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">should_revert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonce</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.roles_modifier.RolesMod" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to handle role-based transactions on a blockchain.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="roles_royce.roles_modifier.RolesMod.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_priority_fee</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_fee_per_gas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fee_multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gas_limit_multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.roles_modifier.RolesMod.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a transaction ready to be sent</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roles_royce.roles_modifier.RolesMod.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.roles_modifier.RolesMod.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a static call to validate a transaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roles_royce.roles_modifier.RolesMod.estimate_gas">
+<span class="sig-name descname"><span class="pre">estimate_gas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'latest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.roles_modifier.RolesMod.estimate_gas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate the gas that would be needed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="roles_royce.roles_modifier.RolesMod.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contract_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_priority_fee</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_fee_per_gas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fee_multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gas_limit_multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.roles_modifier.RolesMod.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a role-based transaction. Returns the transaction hash as a str.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 </section>
 </section>
@@ -165,15 +293,16 @@ such as studying it or composing it with other contracts.</p>
 
 <h3>Navigation</h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="generic_calls.html">Generic calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocols/index.html">Protocols</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="protocols/index.html">Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generic_calls.html">Generic calls</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-roles_royce.roles">Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-roles_royce.roles">Roles functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#transactable-elements">Transactable elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#roles-modifier">Roles Modifier</a></li>
 </ul>
 </li>
 </ul>
@@ -193,7 +322,7 @@ such as studying it or composing it with other contracts.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="protocols/spark.html" title="previous chapter">Spark</a></li>
+      <li>Previous: <a href="generic_calls.html" title="previous chapter">Generic calls</a></li>
   </ul></li>
 </ul>
 </div>
