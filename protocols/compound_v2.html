@@ -35,7 +35,7 @@
 <span id="compound-v2"></span><h1>Compound v2<a class="headerlink" href="#module-roles_royce.protocols.eth.compound_v2" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.Ctoken">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Ctoken</span></span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Ctoken" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">Ctoken</span></span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Ctoken" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>cAAVE</strong>: 0xe65cdB6479BaC1e22340E4E755fAE7E509EcD06c</p>
 <p><strong>cBAT</strong>: 0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E</p>
 <p><strong>cCOMP</strong>: 0x70e36f6BF80a52b3B46b3aF8e106CC0ed743E8e4</p>
@@ -60,14 +60,14 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.Approve">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Approve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Approve" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">Approve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Approve" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.Mint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Mint" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">Mint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Mint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deposit asset.</p>
 <p>Sender deposits a specified amount of underlying asset in exchange for cTokens</p>
 <p><strong>target_address</strong>: None</p>
@@ -76,7 +76,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.Redeem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Redeem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Redeem" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">Redeem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Redeem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Withdraw asset.</p>
 <p>It is called when MAX underlying amount is withdrawn</p>
 <p><strong>target_address</strong>: None</p>
@@ -85,7 +85,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.RedeemUnderlying">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RedeemUnderlying</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.RedeemUnderlying" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">RedeemUnderlying</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.RedeemUnderlying" title="Permalink to this definition">¶</a></dt>
 <dd><p>Withdraw asset.</p>
 <p>It is called when MAX underlying amount is withdrawn</p>
 <p><strong>target_address</strong>: None</p>
@@ -94,7 +94,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.EnterMarkets">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EnterMarkets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.EnterMarkets" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">EnterMarkets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.EnterMarkets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set asset as collateral</p>
 <p><strong>target_address</strong>: &lt;ETHAddr.COMPOUND_V2_Comptroller: ‘0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
@@ -102,7 +102,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.ExitMarket">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExitMarket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.ExitMarket" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">ExitMarket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.ExitMarket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unset asset as collateral</p>
 <p><strong>target_address</strong>: &lt;ETHAddr.COMPOUND_V2_Comptroller: ‘0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
@@ -110,7 +110,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.Borrow">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Borrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Borrow" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">Borrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Borrow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Borrow underlying asset amount.</p>
 <p><strong>target_address</strong>: None</p>
 <p><strong>fixed_arguments</strong>: {}</p>
@@ -118,7 +118,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.Repay">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Repay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Repay" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">Repay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctoken</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.Repay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repay underlying asset amount.</p>
 <p><strong>target_address</strong>: None</p>
 <p><strong>fixed_arguments</strong>: {}</p>
@@ -126,7 +126,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.RepayETH">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RepayETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.RepayETH" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">RepayETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.RepayETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repay ETH amount</p>
 <p><strong>target_address</strong>: &lt;ETHAddr.COMPOUND_V2_Maximillion: ‘0xf859A1AD94BcF445A406B892eF0d3082f4174088’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘borrower’: AvatarAddress}</p>
@@ -134,7 +134,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.compound_v2.ClaimCOMP">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ClaimCOMP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.ClaimCOMP" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.compound_v2.</span></span><span class="sig-name descname"><span class="pre">ClaimCOMP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.compound_v2.ClaimCOMP" title="Permalink to this definition">¶</a></dt>
 <dd><p>Claim COMP rewards.</p>
 <p><strong>target_address</strong>: &lt;ETHAddr.COMPOUND_V2_Comptroller: ‘0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘holder’: AvatarAddress}</p>
@@ -152,6 +152,8 @@
 <h1 class="logo"><a href="../index.html">Roles Royce</a></h1>
 
 
+
+<p class="blurb">Execute transactions using Zodiac Roles Modifier contracts.</p>
 
 
 
@@ -179,6 +181,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://github.com/KarpatkeyDAO/roles_royce/">Source code</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/KarpatkeyDAO/roles_royce/issues">Issue tracker</a></li>
+    
+    <li class="toctree-l1"><a href="https://www.karpatkey.com/">Karpatkey</a></li>
+    
+</ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>

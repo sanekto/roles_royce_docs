@@ -35,7 +35,7 @@
 <span id="balancer"></span><h1>Balancer<a class="headerlink" href="#module-roles_royce.protocols.eth.balancer" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.StablePoolExitKind">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StablePoolExitKind</span></span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.StablePoolExitKind" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">StablePoolExitKind</span></span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.StablePoolExitKind" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>EXACT_BPT_IN_FOR_ONE_TOKEN_OUT</strong>: 0</p>
 <p><strong>BPT_IN_FOR_EXACT_TOKENS_OUT</strong>: 1</p>
 <p><strong>EXACT_BPT_IN_FOR_ALL_TOKENS_OUT</strong>: 2</p>
@@ -43,7 +43,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.StablePoolJoinKind">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StablePoolJoinKind</span></span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.StablePoolJoinKind" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">StablePoolJoinKind</span></span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.StablePoolJoinKind" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>INIT</strong>: 0</p>
 <p><strong>EXACT_TOKENS_IN_FOR_BPT_OUT</strong>: 1</p>
 <p><strong>TOKEN_IN_FOR_EXACT_BPT_OUT</strong>: 2</p>
@@ -52,7 +52,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.ApproveForVault">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveForVault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ApproveForVault" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">ApproveForVault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ApproveForVault" title="Permalink to this definition">¶</a></dt>
 <dd><p>approve Token with BalancerVault as spender</p>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;CrossChainAddr.BalancerVault: ‘0xBA12222222228d8Ba445958a75a0704d566BF2C8’&gt;}</p>
@@ -60,7 +60,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.QueryExit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">QueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.QueryExit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">QueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.QueryExit" title="Permalink to this definition">¶</a></dt>
 <dd><p>calculate amounts out for certain BPTin</p>
 <p><strong>target_address</strong>: None</p>
 <p><strong>fixed_arguments</strong>: {}</p>
@@ -68,7 +68,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.SingleAssetExit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleAssetExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetExit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">SingleAssetExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetExit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Single Asset Exit</p>
 <p>User sends a precise quantity of BPT, and receives an estimated but unknown (computed at run time) quantity of a single token.</p>
 <p><strong>target_address</strong>: &lt;CrossChainAddr.BalancerVault: ‘0xBA12222222228d8Ba445958a75a0704d566BF2C8’&gt;</p>
@@ -77,7 +77,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.ProportionalExit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProportionalExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalExit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">ProportionalExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalExit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Proportional Exit</p>
 <p>User sends a precise quantity of BPT, and receives an estimated but unknown (computed at run time) quantities of all tokens.</p>
 <p><strong>target_address</strong>: &lt;CrossChainAddr.BalancerVault: ‘0xBA12222222228d8Ba445958a75a0704d566BF2C8’&gt;</p>
@@ -86,7 +86,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.CustomExit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CustomExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.CustomExit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">CustomExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.CustomExit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Custom Exit</p>
 <p>User sends an estimated but unknown (computed at run time) quantity of BPT, and receives precise quantities of specified tokens.</p>
 <p><strong>target_address</strong>: &lt;CrossChainAddr.BalancerVault: ‘0xBA12222222228d8Ba445958a75a0704d566BF2C8’&gt;</p>
@@ -95,28 +95,28 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.SingleAssetQueryExit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleAssetQueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetQueryExit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">SingleAssetQueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetQueryExit" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>target_address</strong>: &lt;ETHAddr.BALANCER_Queries: ‘0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘sender’: AvatarAddress, ‘recipient’: AvatarAddress, ‘to_internal_balance’: False}</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.ProportionalExitQueryExit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProportionalExitQueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalExitQueryExit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">ProportionalExitQueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalExitQueryExit" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>target_address</strong>: &lt;ETHAddr.BALANCER_Queries: ‘0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘sender’: AvatarAddress, ‘recipient’: AvatarAddress, ‘to_internal_balance’: False}</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.CustomQueryExit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CustomQueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.CustomQueryExit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">CustomQueryExit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_bpt_amount_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.CustomQueryExit" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>target_address</strong>: &lt;ETHAddr.BALANCER_Queries: ‘0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘sender’: AvatarAddress, ‘recipient’: AvatarAddress, ‘to_internal_balance’: False}</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.QueryJoin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">QueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.QueryJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">QueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.QueryJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p>calculate BPT out for certain tokens in</p>
 <p><strong>target_address</strong>: None</p>
 <p><strong>fixed_arguments</strong>: {}</p>
@@ -124,7 +124,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.SingleAssetJoin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleAssetJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">join_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">SingleAssetJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">join_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Single Asset Join</p>
 <p>User sends an estimated but unknown (computed at run time) quantity of a single token, and receives a precise quantity of BPT.</p>
 <p><strong>target_address</strong>: &lt;CrossChainAddr.BalancerVault: ‘0xBA12222222228d8Ba445958a75a0704d566BF2C8’&gt;</p>
@@ -133,7 +133,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.ProportionalJoin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProportionalJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">ProportionalJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Proportional Join</p>
 <p>User sends estimated but unknown (computed at run time) quantities of tokens, and receives precise quantity of BPT.</p>
 <p><strong>target_address</strong>: &lt;CrossChainAddr.BalancerVault: ‘0xBA12222222228d8Ba445958a75a0704d566BF2C8’&gt;</p>
@@ -142,7 +142,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.ExactTokensJoin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExactTokensJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bpt_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ExactTokensJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">ExactTokensJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bpt_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ExactTokensJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exact Tokens Join</p>
 <p>User sends precise quantities of tokens, and receives an estimated but unknown (computed at run time) quantity of BPT.</p>
 <p><strong>target_address</strong>: &lt;CrossChainAddr.BalancerVault: ‘0xBA12222222228d8Ba445958a75a0704d566BF2C8’&gt;</p>
@@ -151,21 +151,21 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.SingleAssetQueryJoin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SingleAssetQueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">join_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetQueryJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">SingleAssetQueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">join_token_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.SingleAssetQueryJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>target_address</strong>: &lt;ETHAddr.BALANCER_Queries: ‘0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘sender’: AvatarAddress, ‘recipient’: AvatarAddress, ‘from_internal_balance’: False}</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.ProportionalExitQueryJoin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProportionalExitQueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalExitQueryJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">ProportionalExitQueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpt_amount_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ProportionalExitQueryJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>target_address</strong>: &lt;ETHAddr.BALANCER_Queries: ‘0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘sender’: AvatarAddress, ‘recipient’: AvatarAddress, ‘from_internal_balance’: False}</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.balancer.ExactAssetQueryJoin">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExactAssetQueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bpt_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ExactAssetQueryJoin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.balancer.</span></span><span class="sig-name descname"><span class="pre">ExactAssetQueryJoin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amounts_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bpt_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.balancer.ExactAssetQueryJoin" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>target_address</strong>: &lt;ETHAddr.BALANCER_Queries: ‘0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘sender’: AvatarAddress, ‘recipient’: AvatarAddress, ‘from_internal_balance’: False}</p>
 </dd></dl>
@@ -182,6 +182,8 @@
 <h1 class="logo"><a href="../index.html">Roles Royce</a></h1>
 
 
+
+<p class="blurb">Execute transactions using Zodiac Roles Modifier contracts.</p>
 
 
 
@@ -209,6 +211,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://github.com/KarpatkeyDAO/roles_royce/">Source code</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/KarpatkeyDAO/roles_royce/issues">Issue tracker</a></li>
+    
+    <li class="toctree-l1"><a href="https://www.karpatkey.com/">Karpatkey</a></li>
+    
+</ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>

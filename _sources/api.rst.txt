@@ -1,14 +1,17 @@
 API
 ===
 
-.. module:: roles_royce
+Roles
+-----
+
+.. module:: roles_royce.roles
 
 
-.. autofunction:: roles_royce.build
+.. autofunction:: roles_royce.roles.build
 
-.. autofunction:: roles_royce.check
+.. autofunction:: roles_royce.roles.check
 
-.. autofunction:: roles_royce.send
+.. autofunction:: roles_royce.roles.send
 
 
 Transactable elements
