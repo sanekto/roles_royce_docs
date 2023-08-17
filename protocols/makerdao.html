@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Makerdao &#8212; Roles Royce  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=bfbd5f32" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Spark" href="spark.html" />
+    <link rel="prev" title="Lido" href="lido.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-roles_royce.protocols.eth.makerdao">
+<span id="makerdao"></span><h1>Makerdao<a class="headerlink" href="#module-roles_royce.protocols.eth.makerdao" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.ApproveDAI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.ApproveDAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve DAI with CDP manager as spender</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.DAI: ‘0x6B175474E89094C44Da98b954EedeAC495271d0F’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.ApproveWstETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.ApproveWstETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve stETH with CDP manager as spender</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.ApproveIOU">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveIOU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.ApproveIOU" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve IOU to get MKR undelegated</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerIOU: ‘0x447db3e7Cf4b4Dcf7cADE7bDBc375018408B8098’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.WithdrawCollateral">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WithdrawCollateral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adapter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cdp_vault</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.WithdrawCollateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>withdraw collateral from vault</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerProxy: ‘0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘cdp_manager’: &lt;ETHAddr.MakerCDPManager: ‘0x5ef30b9986345249bc32d8928B7ee64DE9435E39’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.DepositCollateral">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DepositCollateral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adapter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cdp_vault</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.DepositCollateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>deposit collateral in vault</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerProxy: ‘0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘cdp_manager’: &lt;ETHAddr.MakerCDPManager: ‘0x5ef30b9986345249bc32d8928B7ee64DE9435E39’&gt;, ‘transfer_from’: True}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.PayBack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PayBack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adapter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cdp_vault</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.PayBack" title="Permalink to this definition">¶</a></dt>
+<dd><p>pay back borrowed</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerProxy: ‘0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘cdp_manager’: &lt;ETHAddr.MakerCDPManager: ‘0x5ef30b9986345249bc32d8928B7ee64DE9435E39’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.MintDAI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MintDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adapter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cdp_vault</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.MintDAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>mint DAI to borrow</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerProxy: ‘0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘cdp_manager’: &lt;ETHAddr.MakerCDPManager: ‘0x5ef30b9986345249bc32d8928B7ee64DE9435E39’&gt;, ‘jug’: &lt;ETHAddr.MakerJug: ‘0x19c0976f590D67707E62397C87829d896Dc0f1F1’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.PayBackAndWithdrawCol">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PayBackAndWithdrawCol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adapter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dai_join</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cdp_vault</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.PayBackAndWithdrawCol" title="Permalink to this definition">¶</a></dt>
+<dd><p>be free</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerProxy: ‘0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘cdp_manager’: &lt;ETHAddr.MakerCDPManager: ‘0x5ef30b9986345249bc32d8928B7ee64DE9435E39’&gt;, ‘jug’: &lt;ETHAddr.MakerJug: ‘0x19c0976f590D67707E62397C87829d896Dc0f1F1’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.UndelegateMKR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UndelegateMKR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.UndelegateMKR" title="Permalink to this definition">¶</a></dt>
+<dd><p>undelegate any MKR</p>
+<p><strong>target_address</strong>: None</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.DelegateMKR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DelegateMKR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.DelegateMKR" title="Permalink to this definition">¶</a></dt>
+<dd><p>delegate MKR</p>
+<p><strong>target_address</strong>: None</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.JoinPot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JoinPot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.JoinPot" title="Permalink to this definition">¶</a></dt>
+<dd><p>join the pot through DSR Manager</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerDSRManager: ‘0x373238337Bfe1146fb49989fc222523f83081dDb’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.ExitPot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExitPot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.ExitPot" title="Permalink to this definition">¶</a></dt>
+<dd><p>exit the pot through DSR Manager</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerDSRManager: ‘0x373238337Bfe1146fb49989fc222523f83081dDb’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.makerdao.DripThePot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DripThePot</span></span><a class="headerlink" href="#roles_royce.protocols.eth.makerdao.DripThePot" title="Permalink to this definition">¶</a></dt>
+<dd><p>drip the pot to be able to join and exit</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.MakerDSRManager: ‘0x373238337Bfe1146fb49989fc222523f83081dDb’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Roles Royce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generic_calls.html">Generic calls</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Protocols</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="aave_v2.html">AAVEv2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aura.html">Aura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="balancer.html">Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v2.html">Compound v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v3.html">Compound v3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lido.html">Lido</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Makerdao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spark.html">Spark</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Protocols</a><ul>
+      <li>Previous: <a href="lido.html" title="previous chapter">Lido</a></li>
+      <li>Next: <a href="spark.html" title="next chapter">Spark</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Karpatkey.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/protocols/makerdao.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

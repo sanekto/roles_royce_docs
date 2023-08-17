@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spark &#8212; Roles Royce  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=bfbd5f32" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API" href="../api.html" />
+    <link rel="prev" title="Makerdao" href="makerdao.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-roles_royce.protocols.eth.spark">
+<span id="spark"></span><h1>Spark<a class="headerlink" href="#module-roles_royce.protocols.eth.spark" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.RateModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RateModel</span></span><a class="headerlink" href="#roles_royce.protocols.eth.spark.RateModel" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>STABLE</strong>: 1</p>
+<p><strong>VARIABLE</strong>: 2</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.ApproveDAIforSDAI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveDAIforSDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.ApproveDAIforSDAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve DAI with sDAI as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.sDAI: ‘0x83F20F44975D03b1b09e64809B757c47f942BEeA’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.ApproveToken">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.ApproveToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve Token with SparkLendingPoolV3 as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.DepositToken">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DepositToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.DepositToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sender deposits Token and receives spToken in exchange</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress, ‘referral_code’: 0}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.DepositDAIforSDAI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DepositDAIforSDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.DepositDAIforSDAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sender deposits DAI and receives sDAI in exchange (the DAI is deposited in Maker - DSR)</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.sDAI: ‘0x83F20F44975D03b1b09e64809B757c47f942BEeA’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘receiver’: AvatarAddress}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.WithdrawToken">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WithdrawToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.WithdrawToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sender redeems spToken and withdraws Token</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘receiver’: AvatarAddress}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.RedeemSDAIforDAI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RedeemSDAIforDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.RedeemSDAIforDAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sender redeems sDAI and withdraws DAI</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.sDAI: ‘0x83F20F44975D03b1b09e64809B757c47f942BEeA’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘receiver’: AvatarAddress, ‘owner’: AvatarAddress}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.Borrow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Borrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.Borrow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sender receives Token and receives debtToken (stable or variable debt) token</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress, ‘referral_code’: 0}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.Repay">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Repay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.Repay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Repay borrowed Token</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress}</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Roles Royce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generic_calls.html">Generic calls</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Protocols</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="aave_v2.html">AAVEv2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aura.html">Aura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="balancer.html">Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v2.html">Compound v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v3.html">Compound v3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lido.html">Lido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="makerdao.html">Makerdao</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Spark</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Protocols</a><ul>
+      <li>Previous: <a href="makerdao.html" title="previous chapter">Makerdao</a></li>
+      <li>Next: <a href="../api.html" title="next chapter">API</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Karpatkey.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/protocols/spark.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

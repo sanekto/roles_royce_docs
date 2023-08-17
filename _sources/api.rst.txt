@@ -1,0 +1,23 @@
+API
+===
+
+.. module:: roles_royce
+
+
+.. autofunction:: roles_royce.build
+
+.. autofunction:: roles_royce.check
+
+.. autofunction:: roles_royce.send
+
+
+Transactable elements
+---------------------
+
+.. autoclass:: Transactable
+   :members:
+   :inherited-members:
+
+.. autoclass:: roles_royce.protocols.base.ContractMethod
+   :members:
+   :inherited-members:

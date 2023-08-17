@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Aura &#8212; Roles Royce  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=bfbd5f32" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Balancer" href="balancer.html" />
+    <link rel="prev" title="AAVEv2" href="aave_v2.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-roles_royce.protocols.eth.aura">
+<span id="aura"></span><h1>Aura<a class="headerlink" href="#module-roles_royce.protocols.eth.aura" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ApproveForBooster">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveForBooster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ApproveForBooster" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve LPToken with AURABooster as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AURABooster: ‘0xA57b8d98dAE62B26Ec3bcC4a365338157060B234’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ApproveTokenDepWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveTokenDepWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ApproveTokenDepWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve token with AURA_rewardpool_dep_wrapper as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AURA_rewardpool_dep_wrapper: ‘0xB188b1CB84Fb0bA13cb9ee1292769F903A9feC59’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ApproveAURABal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveAURABal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ApproveAURABal" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve AURABal with AURABAL_bal_weth_depositor as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AURABAL: ‘0x616e8BfA43F920657B3497DBf40D6b1A02D4608d’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ApproveB80Bal20WETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveB80Bal20WETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ApproveB80Bal20WETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve B80Bal20WETH with AURABAL_bal_weth_depositor as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AURABAL_bal_weth_depositor: ‘0xeAd792B55340Aa20181A80d6a16db6A0ECd1b827’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ApproveBAL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveBAL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ApproveBAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve BAL with AURABAL_bal_depositor as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AURABAL_bal_depositor: ‘0x68655AD9852a99C87C0934c7290BB62CFa5D4123’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ApproveAURABalStk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveAURABalStk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ApproveAURABalStk" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve AURABal with stkAURABAL as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.stkAURABAL: ‘0xfAA2eD111B4F580fCb85C48E6DC6782Dc5FCD7a6’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ApproveAURA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveAURA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ApproveAURA" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve AURA with AURALocker as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AURALocker: ‘0x3Fa73f1E5d8A792C80F426fc8F84FBF7Ce9bBCAC’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.WithdrawAndUndwrapStakedBPT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WithdrawAndUndwrapStakedBPT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reward_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.WithdrawAndUndwrapStakedBPT" title="Permalink to this definition">¶</a></dt>
+<dd><p>withdraw and unwrap AURAVaultToken</p>
+<p><strong>target_address</strong>: None</p>
+<p><strong>fixed_arguments</strong>: {‘claim’: True}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.DepositBPT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DepositBPT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.DepositBPT" title="Permalink to this definition">¶</a></dt>
+<dd><p>deposit BPT token</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.AURABooster: ‘0xA57b8d98dAE62B26Ec3bcC4a365338157060B234’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘stake’: True}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.StakeAURABal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StakeAURABal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.StakeAURABal" title="Permalink to this definition">¶</a></dt>
+<dd><p>stake aurabal</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.AURABAL_stakingrewarder: ‘0x00A7BA8Ae7bca0B10A32Ea1f8e2a1Da980c6CAd2’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.Deposit80BAL20WETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Deposit80BAL20WETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stake_address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.Deposit80BAL20WETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>deposit 80% BAL and 20% WETH</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.AURABAL_bal_weth_depositor: ‘0xeAd792B55340Aa20181A80d6a16db6A0ECd1b827’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘lock’: True}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.DepositBAL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DepositBAL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stake_address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.DepositBAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>deposit BAL</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.AURABAL_bal_depositor: ‘0x68655AD9852a99C87C0934c7290BB62CFa5D4123’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘lock’: True}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.WithdrawAuraBAL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WithdrawAuraBAL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">claim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.WithdrawAuraBAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>withdraw aurabal</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.AURABAL_stakingrewarder: ‘0x00A7BA8Ae7bca0B10A32Ea1f8e2a1Da980c6CAd2’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.CompounderStaking">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompounderStaking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.CompounderStaking" title="Permalink to this definition">¶</a></dt>
+<dd><p>compounder staking</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.stkAURABAL: ‘0xfAA2eD111B4F580fCb85C48E6DC6782Dc5FCD7a6’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.CompounderWithdraw">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompounderWithdraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.CompounderWithdraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>compounder withdraw unsaking</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.stkAURABAL: ‘0xfAA2eD111B4F580fCb85C48E6DC6782Dc5FCD7a6’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.CompounderRedeem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CompounderRedeem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.CompounderRedeem" title="Permalink to this definition">¶</a></dt>
+<dd><p>compounder redeem</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.stkAURABAL: ‘0xfAA2eD111B4F580fCb85C48E6DC6782Dc5FCD7a6’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.LockAURA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LockAURA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receiver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.LockAURA" title="Permalink to this definition">¶</a></dt>
+<dd><p>lock aura</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.AURALocker: ‘0x3Fa73f1E5d8A792C80F426fc8F84FBF7Ce9bBCAC’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.aura.ProcessExpiredLocks">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProcessExpiredLocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relock</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aura.ProcessExpiredLocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>process expired locks</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.AURALocker: ‘0x3Fa73f1E5d8A792C80F426fc8F84FBF7Ce9bBCAC’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Roles Royce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generic_calls.html">Generic calls</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Protocols</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="aave_v2.html">AAVEv2</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Aura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="balancer.html">Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v2.html">Compound v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v3.html">Compound v3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lido.html">Lido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="makerdao.html">Makerdao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spark.html">Spark</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Protocols</a><ul>
+      <li>Previous: <a href="aave_v2.html" title="previous chapter">AAVEv2</a></li>
+      <li>Next: <a href="balancer.html" title="next chapter">Balancer</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Karpatkey.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/protocols/aura.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

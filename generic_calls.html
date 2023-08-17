@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generic calls &#8212; Roles Royce  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=bfbd5f32" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Protocols" href="protocols/index.html" />
+    <link rel="prev" title="Welcome to Roles Royce’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="generic-calls">
+<h1>Generic calls<a class="headerlink" href="#generic-calls" title="Permalink to this heading">¶</a></h1>
+<p>Beside the provided protocol methods, generic calls can be performed.</p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">roles_royce</span> <span class="kn">import</span> <span class="n">check</span><span class="p">,</span> <span class="n">send</span><span class="p">,</span> <span class="n">GenericMethodTransaction</span><span class="p">,</span> <span class="n">Operation</span><span class="p">,</span> <span class="n">Chain</span>
+
+<span class="n">CURVE_USDC_USDT_REWARD_GAUGE</span> <span class="o">=</span> <span class="s2">&quot;0x7f90122BF0700F9E7e1F688fe926940E8839F353&quot;</span>
+
+<span class="n">approve</span> <span class="o">=</span> <span class="n">GenericMethodTransaction</span><span class="p">(</span>
+    <span class="n">function_name</span><span class="o">=</span><span class="s2">&quot;approve&quot;</span><span class="p">,</span>
+    <span class="n">function_args</span><span class="o">=</span><span class="p">[</span><span class="n">CURVE_USDC_USDT_REWARD_GAUGE</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">GCAddr</span><span class="o">.</span><span class="n">USDT</span><span class="p">,</span>
+    <span class="n">contract_abi</span><span class="o">=</span><span class="s1">&#39;[{&quot;constant&quot;:false,&quot;inputs&quot;:[{&quot;name&quot;:&quot;_to&quot;,&quot;type&quot;:&quot;address&quot;},{&quot;name&quot;:&quot;_value&quot;,&quot;type&quot;:&quot;uint256&quot;}],&quot;name&quot;:&quot;approve&quot;,&#39;</span>
+                 <span class="s1">&#39;&quot;outputs&quot;:[{&quot;name&quot;:&quot;result&quot;,&quot;type&quot;:&quot;bool&quot;}],&quot;payable&quot;:false,&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;}]&#39;</span><span class="p">,</span>
+    <span class="n">operation</span><span class="o">=</span><span class="n">Operation</span><span class="o">.</span><span class="n">CALL</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">add_liquidity</span> <span class="o">=</span> <span class="n">GenericMethodTransaction</span><span class="p">(</span>
+    <span class="n">function_name</span><span class="o">=</span><span class="s2">&quot;add_liquidity&quot;</span><span class="p">,</span>
+    <span class="n">function_args</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="n">contract_address</span><span class="o">=</span><span class="n">CURVE_USDC_USDT_REWARD_GAUGE</span><span class="p">,</span>
+    <span class="n">contract_abi</span><span class="o">=</span><span class="s1">&#39;[{&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;,&quot;name&quot;:&quot;add_liquidity&quot;,&quot;inputs&quot;:[{&quot;name&quot;:&quot;_amounts&quot;,&quot;type&quot;:&quot;uint256[3]&quot;},&#39;</span>
+                 <span class="s1">&#39;{&quot;name&quot;:&quot;_min_mint_amount&quot;,&quot;type&quot;:&quot;uint256&quot;}],&quot;outputs&quot;:[{&quot;name&quot;:&quot;&quot;,&quot;type&quot;:&quot;uint256&quot;}],&quot;gas&quot;:7295966}]&#39;</span><span class="p">,</span>
+    <span class="n">operation</span><span class="o">=</span><span class="n">Operation</span><span class="o">.</span><span class="n">CALL</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="n">ROLES_MOD_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;0xB6CeDb9603e7992A5d42ea2246B3ba0a21342503&quot;</span>
+<span class="n">ACCOUNT</span> <span class="o">=</span> <span class="s2">&quot;0x7e19DE37A31E40eec58977CEA36ef7fB70e2c5CD&quot;</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">check</span><span class="p">(</span><span class="n">txs</span><span class="o">=</span><span class="p">[</span><span class="n">approve</span><span class="p">,</span> <span class="n">add_liquidity</span><span class="p">],</span>
+               <span class="n">role</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+               <span class="n">account</span><span class="o">=</span><span class="n">ACCOUNT</span><span class="p">,</span>
+               <span class="n">roles_mod_address</span><span class="o">=</span><span class="n">ROLES_MOD_ADDRESS</span><span class="p">,</span>
+               <span class="n">web3</span><span class="o">=</span><span class="n">w3</span><span class="p">,</span>
+               <span class="n">blockchain</span><span class="o">=</span><span class="n">Chain</span><span class="o">.</span><span class="n">GC</span><span class="p">)</span>
+
+<span class="o">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Roles Royce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Generic calls</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="protocols/index.html">Protocols</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Roles Royce’s documentation!</a></li>
+      <li>Next: <a href="protocols/index.html" title="next chapter">Protocols</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Karpatkey.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/generic_calls.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

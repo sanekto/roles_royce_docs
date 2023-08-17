@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lido &#8212; Roles Royce  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=bfbd5f32" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Makerdao" href="makerdao.html" />
+    <link rel="prev" title="Compound v3" href="compound_v3.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-roles_royce.protocols.eth.lido">
+<span id="lido"></span><h1>Lido<a class="headerlink" href="#module-roles_royce.protocols.eth.lido" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ApproveWithdrawalStETHwithWstETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveWithdrawalStETHwithWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ApproveWithdrawalStETHwithWstETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve stETH withdrawal with wstETH as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ApproveWithdrawalStETHWithUnstETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveWithdrawalStETHWithUnstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ApproveWithdrawalStETHWithUnstETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve stETH withdrawal with unstETH as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ApproveWithdrawalWstETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApproveWithdrawalWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ApproveWithdrawalWstETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>approve wstETH withdrawal with unstETH as spender</p>
+<p><strong>target_address</strong>: The token address.</p>
+<p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.Deposit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Deposit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eth_amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.Deposit" title="Permalink to this definition">¶</a></dt>
+<dd><p>sender deposits ETH and receives stETH</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.stETH: ‘0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘referral’: &lt;ETHAddr.ZERO: ‘0x0000000000000000000000000000000000000000’&gt;}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.Wrap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.Wrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>sender deposits stETH and receives wstETH</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.Unwrap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Unwrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.Unwrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>sender redeems wstETH and receives stETH</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.RequestWithdrawalsStETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RequestWithdrawalsStETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.RequestWithdrawalsStETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sender requests a claim on his ETH from stETH</p>
+<p>Locks your stETH in the queue. In exchange, you receive an NFT that represents your position in the queue</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.RequestWithdrawalsWithPermitStETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RequestWithdrawalsWithPermitStETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.RequestWithdrawalsWithPermitStETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>sender requests a claim on his ETH from wstETH</p>
+<p>When the unstETH has no allowance over the owner’s stETH locks your stETH in the queue.
+In exchange, you receive an NFT that represents your position in the queue</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.RequestWithdrawalsWstETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RequestWithdrawalsWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.RequestWithdrawalsWstETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfers the wstETH to the unstETH to be burned in exchange for stETH</p>
+<p>Then it locks your stETH in the queue. In exchange, you receive an NFT that represents your position in the queue</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.RequestWithdrawalsWithPermitWstETH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RequestWithdrawalsWithPermitWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.RequestWithdrawalsWithPermitWstETH" title="Permalink to this definition">¶</a></dt>
+<dd><p>when the unstETH has no allowance over the owner’s wstETH transfers the wstETH to the unstETH to be burned in exchange for stETH.</p>
+<p>Then it locks your stETH in the queue. In exchange, you receive an NFT that represents your position in the queue</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ClaimWithdrawal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ClaimWithdrawal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ClaimWithdrawal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sender wants to claim his ETH.</p>
+<p>Once the request is finalized by the oracle report and becomes claimable, this function claims your ether and burns the NFT</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ClaimWithdrawals">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ClaimWithdrawals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hints</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ClaimWithdrawals" title="Permalink to this definition">¶</a></dt>
+<dd><p>sender wants to claim his ETH in batches or optimize on hint search</p>
+<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<p><strong>fixed_arguments</strong>: {}</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Roles Royce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generic_calls.html">Generic calls</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Protocols</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="aave_v2.html">AAVEv2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aura.html">Aura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="balancer.html">Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v2.html">Compound v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compound_v3.html">Compound v3</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Lido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="makerdao.html">Makerdao</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spark.html">Spark</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Protocols</a><ul>
+      <li>Previous: <a href="compound_v3.html" title="previous chapter">Compound v3</a></li>
+      <li>Next: <a href="makerdao.html" title="next chapter">Makerdao</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Karpatkey.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/protocols/lido.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
