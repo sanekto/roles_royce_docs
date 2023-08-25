@@ -36,3 +36,12 @@ Roles Modifier
 
 .. autoclass:: roles_royce.roles_modifier.RolesMod
     :members:
+
+Simulation
+----------
+
+Transactions can be simulated using Tenderly.
+
+.. autofunction:: roles_royce.utils.simulate_tx
+
+.. autofunction:: roles_royce.utils.tenderly_simulate

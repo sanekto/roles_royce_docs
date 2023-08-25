@@ -271,6 +271,74 @@ inherited class.</p>
 </dd></dl>
 
 </section>
+<section id="simulation">
+<h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this heading">¶</a></h2>
+<p>Transactions can be simulated using Tenderly.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="roles_royce.utils.simulate_tx">
+<span class="sig-prename descclassname"><span class="pre">roles_royce.utils.</span></span><span class="sig-name descname"><span class="pre">simulate_tx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.utils.simulate_tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function to simulate an already built transaction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – Transaction built with roles.build() or any tx data as expected by web3</p></li>
+<li><p><strong>account_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Something like  2ae12345-d123-9876-abcd-123456123456. Get it using tenderly-cli whoami.</p></li>
+<li><p><strong>project</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – project slug. It is the name that is in the url of the dashboard.</p></li>
+<li><p><strong>api_token</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the API token. Something like abIcb3qwhdPSPasd-asdfgA-foobarbaz.</p></li>
+<li><p><strong>block</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of the block to be used for the simulation.</p></li>
+<li><p><strong>sim_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – One of ‘quick’, ‘abi’ or ‘full’.</p></li>
+<li><p><strong>kwargs</strong> – Other parameters to pass to tenderly_simulate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="roles_royce.utils.tenderly_simulate">
+<span class="sig-prename descclassname"><span class="pre">roles_royce.utils.</span></span><span class="sig-name descname"><span class="pre">tenderly_simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">account_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calldata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_if_fails</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gas_price</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.utils.tenderly_simulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulate a transaction using the Tenderly Simulation API.</p>
+<p>Check the docs at <a class="reference external" href="https://docs.tenderly.co/simulations-and-forks/reference/tenderly-simulation-api">https://docs.tenderly.co/simulations-and-forks/reference/tenderly-simulation-api</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>account_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Something like  2ae12345-d123-9876-abcd-123456123456. Get it using tenderly-cli whoami.</p></li>
+<li><p><strong>project</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – project slug. It is the name that is in the url of the dashboard.</p></li>
+<li><p><strong>api_token</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the API token. Something like abIcb3qwhdPSPasd-asdfgA-foobarbaz.</p></li>
+<li><p><strong>block_number</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of the block to be used for the simulation.</p></li>
+<li><p><strong>from_addr</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Address initiating the transaction.</p></li>
+<li><p><strong>to_addr</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The recipient address of the transaction.</p></li>
+<li><p><strong>calldata</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Encoded contract method call data.</p></li>
+<li><p><strong>gas_price</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Price of the gas in Wei.</p></li>
+<li><p><strong>gas</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Amount of gas provided for the simulation.</p></li>
+<li><p><strong>network_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – ID of the network on which the simulation is being run. Eg: “1”</p></li>
+<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Amount of Ether (in Wei) sent along with the transaction.</p></li>
+<li><p><strong>transaction_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Index of the transaction within the block.</p></li>
+<li><p><strong>sim_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – One of ‘quick’, ‘abi’ or ‘full’.</p></li>
+<li><p><strong>save</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Flag indicating whether to save the simulation in dashboard UI.</p></li>
+<li><p><strong>save_if_fails</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – Flag indicating whether to save failed simulation in dashboard UI.</p></li>
+<li><p><strong>access_list</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – List of addresses with their storage keys to grant access for this transaction.
+Eg: [{“address”: “0x3f41a1cfd3c8b8d9c162de0f42307a0095a6e5df”, “storage_keys”: [] }]</p></li>
+<li><p><strong>block_header</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Details of the block header based on the provided block number.
+Eg: { “number”: “0x110ace7”, “hash”: “0x0000000000000000000000000000000000000000000000000000000000000000”, // … }</p></li>
+<li><p><strong>state_objects</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Overrides for specific state objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Simulation data as returned by Tenderly</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 </section>
 
 
@@ -303,6 +371,7 @@ inherited class.</p>
 <li class="toctree-l2"><a class="reference internal" href="#module-roles_royce.roles">Roles functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#transactable-elements">Transactable elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#roles-modifier">Roles Modifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulation">Simulation</a></li>
 </ul>
 </li>
 </ul>

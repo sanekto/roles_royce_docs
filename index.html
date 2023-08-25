@@ -41,7 +41,7 @@ for securing your decentralized finance operations through the use of the
 Roles Modifier contracts.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The project is currently undergoing active development so we expect some
+<p>The project is currently undergoing active development, so we expect some
 backward incompatibility changes until we stabilize the API.
 We encourage you to stay engaged with the project’s updates and contribute
 to its evolution.</p>
@@ -179,6 +179,41 @@ of the contract (or contracts of the protocols) that you want to support.</p>
 </ul>
 </div>
 </section>
+<section id="simulation">
+<h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this heading">¶</a></h2>
+<p>Transactions can be simulated using Tenderly.
+Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">roles_royce</span> <span class="kn">import</span> <span class="n">roles</span>
+<span class="kn">from</span> <span class="nn">roles_royce.protocols.eth</span> <span class="kn">import</span> <span class="n">aura</span>
+<span class="kn">from</span> <span class="nn">roles_royce.utils</span> <span class="kn">import</span> <span class="n">simulate_tx</span>
+
+<span class="n">ROLES_MOD</span> <span class="o">=</span> <span class="s2">&quot;0x1cFB0CD7B1111bf2054615C7C491a15C4A3303cc&quot;</span>
+<span class="n">REVOKER_ROLE</span> <span class="o">=</span> <span class="s2">&quot;0xf099e0f6604BDE0AA860B39F7da75770B34aC804&quot;</span>
+<span class="n">LP80GNO20WETH</span> <span class="o">=</span> <span class="s2">&quot;0x32296969Ef14EB0c6d29669C550D4a0449130230&quot;</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="n">aura</span><span class="o">.</span><span class="n">ApproveForBooster</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">LP80GNO20WETH</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">tx</span> <span class="o">=</span> <span class="n">roles</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">txs</span><span class="o">=</span><span class="p">[</span><span class="n">method</span><span class="p">],</span> <span class="n">role</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">REVOKER_ROLE</span><span class="p">,</span> <span class="n">roles_mod_address</span><span class="o">=</span><span class="n">ROLES_MOD</span><span class="p">,</span> <span class="n">web3</span><span class="o">=</span><span class="n">web3_eth</span><span class="p">)</span>
+
+<span class="n">sim_data</span> <span class="o">=</span> <span class="n">simulate_tx</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span>
+                       <span class="n">block</span><span class="o">=</span><span class="mi">17994590</span><span class="p">,</span>
+                       <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;foobarbaz-d123-4140-adfb-123978bc0ab9&quot;</span><span class="p">,</span>
+                       <span class="n">project</span><span class="o">=</span><span class="s2">&quot;project&quot;</span><span class="p">,</span>
+                       <span class="n">api_token</span><span class="o">=</span><span class="s2">&quot;MyAPiToken123123123&quot;</span><span class="p">,</span>
+                       <span class="n">sim_type</span><span class="o">=</span><span class="s1">&#39;quick&#39;</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">sim_data</span><span class="p">[</span><span class="s1">&#39;transaction&#39;</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>  <span class="c1"># False if transaction fails</span>
+<span class="k">assert</span> <span class="n">sim_data</span><span class="p">[</span><span class="s1">&#39;simulation&#39;</span><span class="p">][</span><span class="s1">&#39;block_number&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">17994590</span>
+<span class="k">assert</span> <span class="n">sim_data</span><span class="p">[</span><span class="s1">&#39;transaction&#39;</span><span class="p">][</span><span class="s1">&#39;call_trace&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="p">{</span>
+    <span class="s1">&#39;call_type&#39;</span><span class="p">:</span> <span class="s1">&#39;CALL&#39;</span><span class="p">,</span> <span class="s1">&#39;from&#39;</span><span class="p">:</span> <span class="s1">&#39;0xf099e0f6604bde0aa860b39f7da75770b34ac804&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;to&#39;</span><span class="p">:</span> <span class="s1">&#39;0x1cfb0cd7b1111bf2054615c7c491a15c4a3303cc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;gas&#39;</span><span class="p">:</span> <span class="mi">96760</span><span class="p">,</span> <span class="s1">&#39;gas_used&#39;</span><span class="p">:</span> <span class="mi">61660</span><span class="p">,</span> <span class="s1">&#39;subtraces&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CALL&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="s1">&#39;0x6928e74b00000000000000000000000032296969ef14eb0c6d29669c550d4a0449130230000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000044095ea7b3000000000000000000000000a57b8d98dae62b26ec3bcc4a365338157060b23400000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="s1">&#39;0x0000000000000000000000000000000000000000000000000000000000000001&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 <section id="api">
 <h2>Api<a class="headerlink" href="#api" title="Permalink to this heading">¶</a></h2>
 <section id="roles-methods">
@@ -264,6 +299,7 @@ method, this part of the documentation is for you.</p>
 <li class="toctree-l2"><a class="reference internal" href="api.html#module-roles_royce.roles">Roles functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#transactable-elements">Transactable elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#roles-modifier">Roles Modifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#simulation">Simulation</a></li>
 </ul>
 </li>
 </ul>
