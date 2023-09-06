@@ -38,16 +38,6 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">InterestRateModel</span></span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.InterestRateModel" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>STABLE</strong>: 1</p>
 <p><strong>VARIABLE</strong>: 2</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.InterestRateModel.STABLE">
-<span class="sig-name descname"><span class="pre">STABLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.InterestRateModel.STABLE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.InterestRateModel.VARIABLE">
-<span class="sig-name descname"><span class="pre">VARIABLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.InterestRateModel.VARIABLE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.InterestRateModel.check">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.InterestRateModel.check" title="Permalink to this definition">¶</a></dt>
@@ -60,30 +50,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">DelegationType</span></span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DelegationType" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>VOTING</strong>: 0</p>
 <p><strong>PROPOSITION</strong>: 1</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DelegationType.VOTING">
-<span class="sig-name descname"><span class="pre">VOTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DelegationType.VOTING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DelegationType.PROPOSITION">
-<span class="sig-name descname"><span class="pre">PROPOSITION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DelegationType.PROPOSITION" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.ApproveForAaveLendingPoolV2">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">ApproveForAaveLendingPoolV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.ApproveForAaveLendingPoolV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Approve Token with AaveLendingPoolV2 as spender.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;}</p>
 </dd></dl>
@@ -92,14 +64,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.ApproveForStkAAVE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">ApproveForStkAAVE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.ApproveForStkAAVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Approve AAVE with stkAAVE as spender.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;}</p>
 </dd></dl>
@@ -108,14 +72,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.ApproveForStkABPT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">ApproveForStkABPT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.ApproveForStkABPT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Approve ABPT with stkABPT as spender.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.stkABPT: ‘0xa1116930326D21fB917d5A27F1E9943A9595fb47’&gt;}</p>
 </dd></dl>
@@ -124,14 +80,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.ApproveForParaSwapRepay">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">ApproveForParaSwapRepay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.ApproveForParaSwapRepay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Approve aToken with ParaSwapRepayAdapter as spender.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AAVE_V2_ParaSwapRepayAdapter: ‘0x80Aca0C645fEdABaa20fd2Bf0Daf57885A309FE6’&gt;}</p>
 </dd></dl>
@@ -140,14 +88,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.ApproveForParaSwapLiquidity">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">ApproveForParaSwapLiquidity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.ApproveForParaSwapLiquidity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Approve aToken with ParaSwapLiquidityAdapter as spender.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.AAVE_V2_ParaSwapLiquidityAdapter: ‘0x135896DE8421be2ec868E0b811006171D9df802A’&gt;}</p>
 </dd></dl>
@@ -156,14 +96,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DepositToken">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">DepositToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DepositToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender deposits Token and receives aToken in exchange.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress, ‘referral_code’: 0}</p>
 </dd></dl>
@@ -172,14 +104,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DepositETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">DepositETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eth_amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DepositETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender deposits ETH and receives aETH in exchange.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_WrappedTokenGateway: ‘0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘address’: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;, ‘on_behalf_of’: AvatarAddress, ‘referral_code’: 0}</p>
 </dd></dl>
@@ -188,14 +112,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.WithdrawToken">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">WithdrawToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.WithdrawToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender redeems aToken and withdraws Token.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘to’: AvatarAddress}</p>
 </dd></dl>
@@ -204,14 +120,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.WithdrawETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">WithdrawETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.WithdrawETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender redeems aETH and withdraws ETH.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_WrappedTokenGateway: ‘0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘address’: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;, ‘to’: AvatarAddress}</p>
 </dd></dl>
@@ -220,14 +128,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.Collateralize">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">Collateralize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_as_collateral</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.Collateralize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set/unset asset as collateral.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -236,14 +136,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.Borrow">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">Borrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.Borrow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender receives Token and receives debtToken (stable or variable debt) token.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘referral_code’: 0, ‘on_behalf_of’: AvatarAddress}</p>
 </dd></dl>
@@ -252,14 +144,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.BorrowETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">BorrowETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate_model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.BorrowETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender receives ETH and debtETH (stable or variable debt) token.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_WrappedTokenGateway: ‘0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘address’: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;, ‘referral_code’: 0}</p>
 </dd></dl>
@@ -268,14 +152,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.SwapBorrowRateMode">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">SwapBorrowRateMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate_model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.SwapBorrowRateMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Swaps the borrow rate mode.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -284,14 +160,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.StakeAAVE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">StakeAAVE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.StakeAAVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stake AAVE in Aave’s safety module.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress}</p>
 </dd></dl>
@@ -300,14 +168,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.StakeABPT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">StakeABPT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.StakeABPT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stake ABPT in Aave’s safety module.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkABPT: ‘0xa1116930326D21fB917d5A27F1E9943A9595fb47’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress}</p>
 </dd></dl>
@@ -316,14 +176,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.UnstakeAAVE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">UnstakeAAVE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.UnstakeAAVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unstake AAVE. Can only be called during the 2 days unstaking window after the 10 days cooldown period.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘to’: AvatarAddress}</p>
 </dd></dl>
@@ -332,14 +184,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.UnstakeABPT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">UnstakeABPT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.UnstakeABPT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unstake ABPT. Can only be called during the 2 days unstaking window after the 10 days cooldown period.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkABPT: ‘0xa1116930326D21fB917d5A27F1E9943A9595fb47’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘to’: AvatarAddress}</p>
 </dd></dl>
@@ -348,14 +192,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.CooldownStkAAVE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">CooldownStkAAVE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.CooldownStkAAVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initiates a 10 days cooldown period, once this is over the 2 days unstaking window opens.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -364,14 +200,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.CooldownStkABPT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">CooldownStkABPT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.CooldownStkABPT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initiates a 10 days cooldown period, once this is over the 2 days unstaking window opens.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkABPT: ‘0xa1116930326D21fB917d5A27F1E9943A9595fb47’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -380,14 +208,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.ClaimAAVERewards">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">ClaimAAVERewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.ClaimAAVERewards" title="Permalink to this definition">¶</a></dt>
 <dd><p>Claim AAVE rewards accrued from staking AAVE.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘to’: AvatarAddress}</p>
 </dd></dl>
@@ -396,14 +216,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.ClaimABPTRewards">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">ClaimABPTRewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.ClaimABPTRewards" title="Permalink to this definition">¶</a></dt>
 <dd><p>Claim AAVE rewards accrued from staking ABPT.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stkABPT: ‘0xa1116930326D21fB917d5A27F1E9943A9595fb47’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘to’: AvatarAddress}</p>
 </dd></dl>
@@ -412,14 +224,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.Repay">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">Repay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate_model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.Repay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repay borrowed Token.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress}</p>
 </dd></dl>
@@ -428,14 +232,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.RepayETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">RepayETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eth_amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.RepayETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repay borrowed ETH.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_WrappedTokenGateway: ‘0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘address’: &lt;ETHAddr.AAVE_V2_LendingPool: ‘0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9’&gt;, ‘on_behalf_of’: AvatarAddress}</p>
 </dd></dl>
@@ -444,14 +240,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.SwapAndRepay">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">SwapAndRepay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">collateral_asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debt_asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collateral_amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debt_repay_amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debt_rate_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buy_all_balance_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calldata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_deadline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.SwapAndRepay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repay debt using collateral.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_ParaSwapRepayAdapter: ‘0x80Aca0C645fEdABaa20fd2Bf0Daf57885A309FE6’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -460,14 +248,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.SwapAndDeposit">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">SwapAndDeposit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_amount_to_receive</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_all_balance_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calldata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">augustus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_deadline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permit_s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.SwapAndDeposit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Swaps an existing amount of a given collateral asset for another one.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_ParaSwapLiquidityAdapter: ‘0x135896DE8421be2ec868E0b811006171D9df802A’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -476,14 +256,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DelegateAAVE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">DelegateAAVE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delegatee</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DelegateAAVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delegate the AAVE voting power for all type of actions (Voting and Proposition).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE: ‘0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -492,14 +264,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DelegateAAVEByType">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">DelegateAAVEByType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delegatee</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delegation_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DelegateAAVEByType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delegate the AAVE voting power by type of action.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE: ‘0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -507,30 +271,14 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DelegatestkAAVE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">DelegatestkAAVE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delegatee</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DelegatestkAAVE" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
+<dd><p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.DelegatestkAAVEByType">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">DelegatestkAAVEByType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delegatee</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delegation_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.DelegatestkAAVEByType" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
+<dd><p><strong>target_address</strong>: &lt;ETHAddr.stkAAVE: ‘0x4da27a545c0c5B758a6BA100e3a049001de870f5’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -538,14 +286,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.aave_v2.SubmitVote">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.aave_v2.</span></span><span class="sig-name descname"><span class="pre">SubmitVote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proposal_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">support</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.aave_v2.SubmitVote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submit vote for a specific snapshot.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.AAVE_V2_Governance: ‘0xEC568fffba86c094cf06b22134B23074DFE2252c’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>

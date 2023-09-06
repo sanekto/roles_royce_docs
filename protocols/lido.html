@@ -37,14 +37,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ApproveWithdrawalStETHwithWstETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">ApproveWithdrawalStETHwithWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ApproveWithdrawalStETHwithWstETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>approve stETH withdrawal with wstETH as spender</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;}</p>
 </dd></dl>
@@ -53,14 +45,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ApproveWithdrawalStETHWithUnstETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">ApproveWithdrawalStETHWithUnstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ApproveWithdrawalStETHWithUnstETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>approve stETH withdrawal with unstETH as spender</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;}</p>
 </dd></dl>
@@ -69,14 +53,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ApproveWithdrawalWstETH">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">ApproveWithdrawalWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ApproveWithdrawalWstETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>approve wstETH withdrawal with unstETH as spender</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;}</p>
 </dd></dl>
@@ -85,14 +61,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.Deposit">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">Deposit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eth_amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.Deposit" title="Permalink to this definition">¶</a></dt>
 <dd><p>sender deposits ETH and receives stETH</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.stETH: ‘0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘referral’: &lt;ETHAddr.ZERO: ‘0x0000000000000000000000000000000000000000’&gt;}</p>
 </dd></dl>
@@ -100,13 +68,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.Wrap">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">Wrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.Wrap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sender deposits stETH and receives wstETH.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>amount</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – amount of wstETH user receives after wrap.</p>
-</dd>
-</dl>
-<p><strong>target_address</strong>: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;</p>
+<dd><p><strong>target_address</strong>: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -114,7 +76,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.Unwrap">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">Unwrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.Unwrap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender redeems wstETH and receives stETH.</p>
-<p>Amount of stETH user receives after unwrap</p>
 <p><strong>target_address</strong>: &lt;ETHAddr.wstETH: ‘0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -124,14 +85,6 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">RequestWithdrawalsStETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.RequestWithdrawalsStETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender requests a claim on his ETH from stETH.</p>
 <p>Locks your stETH in the queue. In exchange, you receive an NFT that represents your position in the queue</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
 </dd></dl>
@@ -142,14 +95,6 @@
 <dd><p>Sender requests a claim on his ETH from wstETH.</p>
 <p>When the unstETH has no allowance over the owner’s stETH locks your stETH in the queue.
 In exchange, you receive an NFT that represents your position in the queue</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
 </dd></dl>
@@ -159,14 +104,6 @@ In exchange, you receive an NFT that represents your position in the queue</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">RequestWithdrawalsWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.RequestWithdrawalsWstETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transfers the wstETH to the unstETH to be burned in exchange for stETH</p>
 <p>Then it locks your stETH in the queue. In exchange, you receive an NFT that represents your position in the queue</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
 </dd></dl>
@@ -176,14 +113,6 @@ In exchange, you receive an NFT that represents your position in the queue</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">RequestWithdrawalsWithPermitWstETH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amounts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.RequestWithdrawalsWithPermitWstETH" title="Permalink to this definition">¶</a></dt>
 <dd><p>when the unstETH has no allowance over the owner’s wstETH transfers the wstETH to the unstETH to be burned in exchange for stETH.</p>
 <p>Then it locks your stETH in the queue. In exchange, you receive an NFT that represents your position in the queue</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘owner’: AvatarAddress}</p>
 </dd></dl>
@@ -191,15 +120,7 @@ In exchange, you receive an NFT that represents your position in the queue</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.GetWithdrawalRequests">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">GetWithdrawalRequests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">owner</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.GetWithdrawalRequests" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<dd><p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -209,14 +130,6 @@ In exchange, you receive an NFT that represents your position in the queue</p>
 <dd><p>Sender wants to claim his ETH.</p>
 <p>Once the request is finalized by the oracle report and becomes claimable,
 this function claims your ether and burns the NFT.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -225,14 +138,6 @@ this function claims your ether and burns the NFT.</p>
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.ClaimWithdrawals">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">ClaimWithdrawals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hints</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.ClaimWithdrawals" title="Permalink to this definition">¶</a></dt>
 <dd><p>sender wants to claim his ETH in batches or optimize on hint search</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
@@ -240,15 +145,7 @@ this function claims your ether and burns the NFT.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.lido.GetWithdrawalStatus">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.lido.</span></span><span class="sig-name descname"><span class="pre">GetWithdrawalStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_ids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.lido.GetWithdrawalStatus" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
+<dd><p><strong>target_address</strong>: &lt;ETHAddr.unstETH: ‘0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 

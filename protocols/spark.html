@@ -38,30 +38,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">RateModel</span></span><a class="headerlink" href="#roles_royce.protocols.eth.spark.RateModel" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>STABLE</strong>: 1</p>
 <p><strong>VARIABLE</strong>: 2</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.RateModel.STABLE">
-<span class="sig-name descname"><span class="pre">STABLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#roles_royce.protocols.eth.spark.RateModel.STABLE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.RateModel.VARIABLE">
-<span class="sig-name descname"><span class="pre">VARIABLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#roles_royce.protocols.eth.spark.RateModel.VARIABLE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.ApproveDAIforSDAI">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">ApproveDAIforSDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.ApproveDAIforSDAI" title="Permalink to this definition">¶</a></dt>
 <dd><p>approve DAI with sDAI as spender</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.sDAI: ‘0x83F20F44975D03b1b09e64809B757c47f942BEeA’&gt;}</p>
 </dd></dl>
@@ -70,14 +52,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.ApproveToken">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">ApproveToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.ApproveToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>approve Token with SparkLendingPoolV3 as spender</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: The token address.</p>
 <p><strong>fixed_arguments</strong>: {‘spender’: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;}</p>
 </dd></dl>
@@ -86,14 +60,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.DepositToken">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">DepositToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.DepositToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender deposits Token and receives spToken in exchange</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress, ‘referral_code’: 0}</p>
 </dd></dl>
@@ -102,14 +68,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.DepositDAIforSDAI">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">DepositDAIforSDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.DepositDAIforSDAI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender deposits DAI and receives sDAI in exchange (the DAI is deposited in Maker - DSR)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.sDAI: ‘0x83F20F44975D03b1b09e64809B757c47f942BEeA’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘receiver’: AvatarAddress}</p>
 </dd></dl>
@@ -118,14 +76,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.WithdrawToken">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">WithdrawToken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.WithdrawToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender redeems spToken and withdraws Token</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘receiver’: AvatarAddress}</p>
 </dd></dl>
@@ -134,14 +84,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.RedeemSDAIforDAI">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">RedeemSDAIforDAI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.RedeemSDAIforDAI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender redeems sDAI and withdraws DAI</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.sDAI: ‘0x83F20F44975D03b1b09e64809B757c47f942BEeA’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘receiver’: AvatarAddress, ‘owner’: AvatarAddress}</p>
 </dd></dl>
@@ -149,15 +91,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.SetUserUseReserveAsCollateral">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">SetUserUseReserveAsCollateral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.SetUserUseReserveAsCollateral" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
+<dd><p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
 <p><strong>fixed_arguments</strong>: {}</p>
 </dd></dl>
 
@@ -165,14 +99,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.Borrow">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">Borrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.Borrow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sender receives Token and receives debtToken (stable or variable debt) token</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress, ‘referral_code’: 0}</p>
 </dd></dl>
@@ -181,14 +107,6 @@
 <dt class="sig sig-object py" id="roles_royce.protocols.eth.spark.Repay">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">roles_royce.protocols.eth.spark.</span></span><span class="sig-name descname"><span class="pre">Repay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.protocols.eth.spark.Repay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repay borrowed Token</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <p><strong>target_address</strong>: &lt;ETHAddr.SparkLendingPoolV3: ‘0xC13e21B648A5Ee794902342038FF3aDAB66BE987’&gt;</p>
 <p><strong>fixed_arguments</strong>: {‘on_behalf_of’: AvatarAddress}</p>
 </dd></dl>

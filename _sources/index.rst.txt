@@ -29,8 +29,6 @@ and some functions to interact with the Roles Modifier contract:
 - :meth:`roles_royce.roles.build` to create a transaction to later be sent to the blockchain
   or other uses such as studying it or composing it with other contracts.
 
-
-
 Many DeFi protocols are already implemented, ready to be used. See `Supported protocols`_.
 
 Example

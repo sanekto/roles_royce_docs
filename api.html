@@ -143,14 +143,6 @@ such as studying it or composing it with other contracts.</p>
 <dd><p>Inherit this class to declare a contract function.</p>
 <p>At least <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">target_address</span></code> must be defined in the
 inherited class.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The value of the tx, eg: amount of Wei in mainnet, xDai Weis in GC.</p></li>
-<li><p><strong>avatar</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Avatar address, usually a Safe address.</p></li>
-</ul>
-</dd>
-</dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="roles_royce.protocols.base.ContractMethod.name">
 <span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#roles_royce.protocols.base.ContractMethod.name" title="Permalink to this definition">¶</a></dt>
@@ -276,7 +268,7 @@ inherited class.</p>
 <p>Transactions can be simulated using Tenderly.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="roles_royce.utils.simulate_tx">
-<span class="sig-prename descclassname"><span class="pre">roles_royce.utils.</span></span><span class="sig-name descname"><span class="pre">simulate_tx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.utils.simulate_tx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">roles_royce.utils.</span></span><span class="sig-name descname"><span class="pre">simulate_tx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">account_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">share</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.utils.simulate_tx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Helper function to simulate an already built transaction</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -288,13 +280,14 @@ inherited class.</p>
 <li><p><strong>block</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of the block to be used for the simulation.</p></li>
 <li><p><strong>sim_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – One of ‘quick’, ‘abi’ or ‘full’.</p></li>
 <li><p><strong>kwargs</strong> – Other parameters to pass to tenderly_simulate.</p></li>
+<li><p><strong>share</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If true the simulation will be public and a link will be retrieved in result[‘share_url’]</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p>
+<dd class="field-odd"><p>Return the simulation data.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -334,6 +327,23 @@ Eg: { “number”: “0x110ace7”, “hash”: “0x00000000000000000000000000
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Simulation data as returned by Tenderly</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="roles_royce.utils.tenderly_share_simulation">
+<span class="sig-prename descclassname"><span class="pre">roles_royce.utils.</span></span><span class="sig-name descname"><span class="pre">tenderly_share_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">account_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulation_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">share</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roles_royce.utils.tenderly_share_simulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publicly share a simulatation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>account_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Something like  2ae12345-d123-9876-abcd-123456123456. Get it using tenderly-cli whoami.</p></li>
+<li><p><strong>project</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – project slug. It is the name that is in the url of the dashboard.</p></li>
+<li><p><strong>api_token</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the API token. Something like abIcb3qwhdPSPasd-asdfgA-foobarbaz.</p></li>
+<li><p><strong>simulation_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Get it from the simulated data ‘id’ field.</p></li>
+<li><p><strong>share</strong> – Use False to unshare a shared simulation.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
